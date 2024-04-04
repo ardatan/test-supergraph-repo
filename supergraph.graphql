@@ -34,7 +34,7 @@ type Product
 
 type Query {
   me: User @join__field(graph: ACCOUNTS)
-  topProducts(first: Int = 5): [Product] @join__field(graph: PRODUCTS)
+  notTopProducts(first: Int = 5): [Product] @join__field(graph: PRODUCTS)
   user(id: ID!): User @join__field(graph: ACCOUNTS)
   users: [User] @join__field(graph: ACCOUNTS)
 }
